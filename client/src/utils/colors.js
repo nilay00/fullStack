@@ -1,0 +1,17 @@
+export const C = {
+  brand: "#15803d",
+  brandMid: "#16a34a",
+  brandLight: "#f0fdf4",
+  brandMuted: "#bbf7d0",
+  brandText: "#166534",
+  gold: "#ca8a04",
+  goldLight: "#fefce8",
+  red: "#dc2626",
+  bg: "#fafaf9",
+  bgWarm: "#f5f5f4",
+  text: "#1c1917",
+  textMid: "#44403c",
+  textMute: "#78716c",
+  border: "#e7e5e4",
+  borderMid: "#d6d3d1",
+};

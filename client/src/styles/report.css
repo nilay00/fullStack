@@ -1,0 +1,72 @@
+/* ── Report modal ── */
+.report-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.report-modal {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+  animation: fadeIn 0.2s ease;
+}
+.report-modal-title { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+.report-modal-subtitle { font-size: 13px; color: var(--text-mute); margin-bottom: 20px; }
+.report-reason-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.report-reason-btn {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  color: var(--text-mid);
+  line-height: 1.4;
+  transition: border-color 0.15s, background 0.15s;
+}
+.report-reason-btn.selected {
+  border-color: var(--brand);
+  background: var(--brand-light);
+  color: var(--brand);
+  font-weight: 600;
+}
+.report-details-label { font-size: 11px; font-weight: 600; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 6px; }
+.report-details-input {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  font-size: 13px;
+  resize: vertical;
+  min-height: 72px;
+  font-family: inherit;
+  color: var(--text);
+}
+.report-modal-actions { display: flex; gap: 8px; margin-top: 16px; justify-content: flex-end; }
+.report-success-box {
+  background: var(--brand-light);
+  border: 1px solid var(--brand-muted);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  margin-top: 12px;
+}
+.report-success-icon { font-size: 28px; margin-bottom: 6px; }
+.report-success-text { font-size: 13px; color: var(--brand-text); }
+.report-close-btn { margin-top: 14px; }
+.report-error { color: var(--red); font-size: 12px; margin-top: 8px; }

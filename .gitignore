@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+.env.local
+*.log
+.DS_Store
+
+# Uploaded photos (user data — don't commit real photos)
+backend/uploads/**
+!backend/uploads/.gitkeep
+!backend/uploads/**/.gitkeep
