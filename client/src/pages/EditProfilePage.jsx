@@ -211,7 +211,7 @@ function EditProfileForm({ user, onSaved, onCancel, pushToast }) {
               <div className="gallery-grid">
                 {gallery.map((g, idx) => (
                   <div key={g._id || idx} className="gallery-item gallery-item-edit">
-                    <img src={g.url} alt={`Gallery ${idx + 1}`} className="gallery-img" />
+                    <img src={`${import.meta.env.VITE_SOCKET_URL}${g.url}`} alt={`Gallery ${idx + 1}`} className="gallery-img" />
                     <button className="gallery-remove-btn" onClick={() => handleGalleryRemove(idx)}>
                       <Icon name="xmark" />
                     </button>

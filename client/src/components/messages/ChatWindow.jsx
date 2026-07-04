@@ -161,7 +161,7 @@ export default function ChatWindow({ conversation, onBack, isMobile }) {
           </button>
         )}
         {contact.avatar
-          ? <img src={contact.avatar} alt={contact.name} className="chat-header-avatar" />
+          ? <img src={`${import.meta.env.VITE_SOCKET_URL}${contact.avatar}`} alt={contact.name} className="chat-header-avatar" />
           : <div className="chat-header-avatar chat-header-avatar-fallback">{contact.name?.[0] || "?"}</div>
         }
         <div className="chat-header-info">
@@ -221,7 +221,7 @@ export default function ChatWindow({ conversation, onBack, isMobile }) {
             {remoteIsTyping && (
               <div className="msg-row them">
                 {contact.avatar
-                  ? <img src={contact.avatar} alt={contact.name} className="msg-avatar" />
+                  ? <img src={`${import.meta.env.VITE_SOCKET_URL}${contact.avatar}`} alt={contact.name} className="msg-avatar" />
                   : <div className="msg-avatar msg-avatar-fallback">{contact.name?.[0] || "?"}</div>
                 }
                 <TypingIndicator />

@@ -30,7 +30,7 @@ export default function Avatar({ src, name = "", size = 40, online = false, lock
   return (
     <div className="avatar-wrap" style={cssVars}>
       {src ? (
-        <img src={src} alt={name} className="avatar-img" />
+        <img src={`${import.meta.env.VITE_SOCKET_URL}${src}`} alt={name} className="avatar-img" />
       ) : (
         <div className="avatar-fallback">{initials || "?"}</div>
       )}

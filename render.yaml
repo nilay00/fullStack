@@ -3,17 +3,10 @@ services:
     name: nikahconnect-backend
     runtime: node
     plan: free
-    rootDir: backend
+    rootDir: server
     buildCommand: npm install
     startCommand: npm start
     healthCheckPath: /api/health
-    # Render's free web service has no persistent disk of its own, so you
-    # can't self-host `mongod` on it. MONGO_URI here should point at either:
-    #   1) a MongoDB Atlas free-forever "M0" cluster (genuinely $0, managed
-    #      by MongoDB Inc, works from anywhere — easiest for a Render deploy), or
-    #   2) a self-hosted MongoDB on a VPS you already own, reachable by Render.
-    # For local development, MONGO_URI in backend/.env can keep pointing at a
-    # `mongod` running on your own machine — no change needed there.
     envVars:
       - key: PORT
         value: 10000

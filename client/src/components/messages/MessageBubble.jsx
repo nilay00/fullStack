@@ -17,7 +17,7 @@ export default function MessageBubble({ message, isMe, contact, isMobile }) {
       {!isMe && (
         <div className="msg-avatar-wrap">
           {contact.avatar
-            ? <img src={contact.avatar} alt={contact.name} className="msg-avatar" />
+            ? <img src={`${import.meta.env.VITE_SOCKET_URL}${contact.avatar}`} alt={contact.name} className="msg-avatar" />
             : <div className="msg-avatar msg-avatar-fallback">{contact.name?.[0] || "?"}</div>
           }
         </div>
@@ -45,7 +45,7 @@ export default function MessageBubble({ message, isMe, contact, isMobile }) {
       </div>
       {isMe && (
         message.senderAvatar
-          ? <img src={message.senderAvatar} alt="me" className="msg-avatar" />
+          ? <img src={`${import.meta.env.VITE_SOCKET_URL}${message.senderAvatar}`} alt="me" className="msg-avatar" />
           : <div className="msg-avatar msg-avatar-fallback">Me</div>
       )}
     </div>

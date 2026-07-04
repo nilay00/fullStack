@@ -39,8 +39,8 @@ export default function GalleryTab({ gallery = [], galleryVisible = true, galler
       <h3 className="tab-section-title">Photo gallery</h3>
       <div className="gallery-view-grid">
         {gallery.map((photo, idx) => (
-          <div key={photo._id || idx} className="gallery-view-item" onClick={() => setLightbox(photo.url)}>
-            <img src={photo.url} alt={photo.caption || `Photo ${idx + 1}`} className="gallery-view-img" />
+          <div key={photo._id || idx} className="gallery-view-item" onClick={() => setLightbox(`${import.meta.env.VITE_SOCKET_URL}${photo.url}`)}>
+            <img src={`${import.meta.env.VITE_SOCKET_URL}${photo.url}`} alt={photo.caption || `Photo ${idx + 1}`} className="gallery-view-img" />
             {photo.caption && <div className="gallery-view-caption">{photo.caption}</div>}
           </div>
         ))}

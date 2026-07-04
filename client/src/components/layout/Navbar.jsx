@@ -64,7 +64,7 @@ export default function Navbar() {
           <div ref={profileRef} className="navbar-profile-wrap">
             <button className="navbar-profile-btn" onClick={() => setProfileOpen(o => !o)}>
               {user?.avatar
-                ? <img src={user.avatar} alt={user.name} className="navbar-profile-img" />
+                ? <img src={`${import.meta.env.VITE_SOCKET_URL}${user.avatar}`} alt={user.name} className="navbar-profile-img" />
                 : <div className="navbar-profile-initials">{user?.name?.[0] || "?"}</div>
               }
               <Icon name={profileOpen ? "chevron-up" : "chevron-down"} className="navbar-profile-chevron" />
@@ -74,7 +74,7 @@ export default function Navbar() {
               <div className="navbar-profile-dropdown">
                 <div className="navbar-profile-header">
                   {user?.avatar
-                    ? <img src={user.avatar} alt={user.name} className="navbar-dropdown-avatar" />
+                    ? <img src={`${import.meta.env.VITE_SOCKET_URL}${user.avatar}`} alt={user.name} className="navbar-dropdown-avatar" />
                     : <div className="navbar-dropdown-initials">{user?.name?.[0] || "?"}</div>
                   }
                   <div>
